@@ -321,3 +321,115 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Module 2 - Responsive Improvements */
+
+/* Prevent horizontal overflow */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Tablet layout */
+@media (max-width: 800px) {
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home {
+        padding: 50px 7%;
+    }
+
+    .about-content {
+        gap: 25px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 500px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .profile-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+    }
+}
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background: #17172f;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+/* Improve mobile navigation */
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .home h1 {
+        font-size: 30px;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+}
