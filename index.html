@@ -13,8 +13,11 @@
     <header>
         <nav class="navbar">
             <h2 class="logo">MyPortfolio</h2>
-
-            <ul class="nav-links">
+            <button id="menu-toggle" type="button">☰ Menu</button>
+            <button id="theme-toggle" type="button">
+                🌙 Dark Mode
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -43,7 +46,7 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="about">
+    <section id="about" class="about reveal">
         <h2 class="section-title">About Me</h2>
 
         <div class="about-content">
@@ -75,7 +78,7 @@
     </section>
 
     <!-- Skills Section -->
-<section id="skills" class="skills">
+<section id="skills" class="skills reveal">
     <h2 class="section-title">My Skills</h2>
 
     <p class="section-description">
@@ -129,7 +132,7 @@
     </div>
 </section>
 <!-- Projects Section -->
-<section id="projects" class="projects">
+<section id="projects" class="projects reveal">
     <h2 class="section-title">My Projects</h2>
 
     <p class="section-description">
@@ -174,14 +177,22 @@
 </section>
 
    <!-- Contact Section -->
-<section id="contact" class="contact">
+<section id="contact" class="contact reveal">
     <h2 class="section-title">Contact Me</h2>
 
     <p>
         I am open to learning opportunities, collaborations,
         and connecting with fellow developers.
     </p>
-
+    <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+    
+        <input type="email" placeholder="Your Email" required>
+    
+        <textarea placeholder="Your Message" required></textarea>
+    
+        <button type="submit">Send Message</button>
+    </form>
     <div class="contact-links">
         <a href="mailto:mainlypriyanka@gmail.com" class="btn">
             ✉ Email Me
@@ -202,6 +213,6 @@
     <footer>
         <p>&copy; 2026 Priyanka. All rights reserved.</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

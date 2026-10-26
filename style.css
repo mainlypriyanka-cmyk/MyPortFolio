@@ -406,30 +406,103 @@ img {
 .skip-link:focus {
     top: 10px;
 }
-/* Improve mobile navigation */
-@media (max-width: 500px) {
-    .navbar {
+/* Mobile Navigation */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px 14px;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        gap: 15px;
     }
 
-    .nav-links {
+    #nav-links.active {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    }
+}
+/* Dark Mode */
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode section,
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+  }
+  
+  /* Buttons */
+  #theme-toggle,
+  #menu-toggle {
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+  
+  /* Scroll Animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+/* Mobile Navigation */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px 14px;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
     }
 
-    .nav-links a {
-        font-size: 13px;
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .home h1 {
-        font-size: 30px;
+    #nav-links.active {
+        display: flex;
     }
+}
+/* Fix text visibility in dark mode */
+body.dark-mode .home h1,
+body.dark-mode .home h2,
+body.dark-mode .home p, {
+    color: #f5f5f5;
+}
 
-    .home-content {
-        width: 100%;
-    }
+body.dark-mode .home h1 span {
+    color: #4da3ff;
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
