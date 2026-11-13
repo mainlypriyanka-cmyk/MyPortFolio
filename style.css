@@ -420,10 +420,26 @@ img {
 
     #nav-links {
         display: none;
+/* Mobile Navigation */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px 14px;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
         flex-direction: column;
+        gap: 15px;
         gap: 15px;
     }
 
+    #nav-links.active {
     #nav-links.active {
         display: flex;
     }
@@ -492,17 +508,107 @@ body {
         display: flex;
     }
 }
+
 /* Fix text visibility in dark mode */
 body.dark-mode .home h1,
 body.dark-mode .home h2,
-body.dark-mode .home p, {
+body.dark-mode .home p {
     color: #f5f5f5;
 }
 
 body.dark-mode .home h1 span {
-    color: #4da3ff;
+    color: #a99cff;
 }
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-links a {
+    display: inline-block;
+    background: #7357df;
+    color: white;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.project-links a:hover {
+    background: #5140a8;
+}
+
+/* Education Section */
+.education {
+    background: linear-gradient(135deg, #f4f1ff, #ffffff);
+}
+
+.education-container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.education-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 5px solid #7357df;
+    box-shadow: 0 8px 25px rgba(65, 45, 120, 0.10);
+}
+
+.education-card h3 {
+    color: #6045c5;
+    margin-bottom: 10px;
+}
+
+.education-card h4 {
+    margin-bottom: 12px;
+    color: #5140a8;
+}
+
+.education-card p {
+    color: #666477;
+    margin-bottom: 18px;
+}
+
+/* Resume Section */
+.resume {
+    text-align: center;
+    background: #ffffff;
+}
+
+.resume p {
+    margin-bottom: 25px;
+    color: #666477;
+}
+
+.resume .btn {
+    font-weight: bold;
+    padding: 14px 25px;
+}
+
+/* Dark Mode New Sections */
+body.dark-mode .education,
+body.dark-mode .resume {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .education-card {
+    background: #292929;
+}
+
+body.dark-mode .education-card h3,
+body.dark-mode .education-card h4,
+body.dark-mode .education-card p,
+body.dark-mode .resume p {
+    color: white;
 }
